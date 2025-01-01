@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ackli Holidays</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<header class="fixed w-full bg-gray-900 bg-opacity-95 text-white z-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex items-center justify-between py-4">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold">Ackli Holidays</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-400">HOME</a>
+                <a href="about.html" class="hover:text-blue-400">ABOUT US</a>
+                <a href="services.html" class="hover:text-blue-400">OUR SERVICES</a>
+                <a href="packages.html" class="hover:text-blue-400">TOUR PACKAGES</a>
+                <a href="contacts.html" class="hover:text-blue-400">CONTACTS</a>
+            </nav>
+            <a href="book.html" class="inline-block">
+                <button class="hidden md:block bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-full">
+                    BOOK NOW
+                </button>
+            </a>
+            
+            <!-- Hamburger Menu Icon -->
+            <button id="menu-btn" class="md:hidden text-2xl">
+                &#9776;
+            </button>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900 p-4 flex flex-col space-y-4" id="mobile-nav">
+        <a href="index.html" class="text-white hover:text-blue-400">HOME</a>
+        <a href="about.html" class="text-white hover:text-blue-400">ABOUT US</a>
+        <a href="services.html" class="text-white hover:text-blue-400">OUR SERVICES</a>
+        <a href="packages.html" class="text-white hover:text-blue-400">TOUR PACKAGES</a>
+        <a href="contacts.html" class="text-white hover:text-blue-400">CONTACTS</a>
+        <!-- BOOK NOW button inside mobile menu -->
+        <button class="bg-blue-500 hover:bg-blue-600 text-sm py-2 px-4 rounded-full" onclick="window.location.href='book.html';">
+            BOOK NOW
+        </button>
+    </div>
+</header>
+
+<!-- Banner Section -->
+<main class="relative min-h-[60vh] overflow-hidden">
+    <!-- Background Image -->
+    <div 
+        class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out bg-image"
+        id="dynamic-image"
+        style="background-image: url('assets/images/book-banner.png');">
+    </div>
+    
+    <!-- Overlay with rgba(0, 0, 0, 0.6) -->
+    <div class="absolute inset-0 bg-[rgba(0,0,0,0.6)]"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-4 flex items-center justify-center min-h-[60vh]">
+        <div class="text-center text-white">
+            <h2 class="text-sky-400 text-2xl font-bold mb-6 animate-fadeIn tracking-[0.4em]">BOOK</h2>
+            <h2 class="text-6xl font-bold animate-fadeIn">YOUR TOUR</h2>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+<!-- About Section -->
+<div class="form-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <div class="form-header text-center mb-5">
+            <h2 class="text-2xl font-semibold text-gray-800">Book Your Tour Package</h2>
+            <hr class="border-t-2 border-gray-300 w-1/3 mx-auto mt-2">
+        </div>
+        <input type="hidden" name="access_key" value="c71d4be7-7f75-4b2e-bf83-c673970d5ca1">
+        
+        <!-- Personal Information Section -->
+        <label for="Name" class="form-label">Full Name</label>
+        <input type="text" name="Name" placeholder="Your Full Name" required class="input-field">
+        
+        <label for="Email" class="form-label">Email Address</label>
+        <input type="email" name="Email" placeholder="Your Email Address" required class="input-field">
+        
+        <label for="Phone" class="form-label">Phone Number</label>
+        <input type="text" name="Phone" placeholder="Your Phone Number" class="input-field">
+        
+        <!-- Tour Package Selection Section -->
+        <label for="inquiryType" class="form-label">Select Your Tour Package</label>
+        <select name="inquiryType" required class="input-field">
+            <option value="" disabled selected>Select Package</option>
+            <option value="Spiritual">Spiritual</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Wildlife">Wildlife</option>
+            <option value="Cultural">Cultural</option>
+        </select>
+
+        <!-- Travel Details Section -->
+        <label for="StartDate" class="form-label">Tour Start Date</label>
+        <input type="date" name="StartDate" required class="input-field">
+        
+        <label for="Accommodation" class="form-label">Accommodation Preferences</label>
+        <select name="Accommodation" class="input-field">
+            <option value="Luxury">Luxury</option>
+            <option value="Standard">Standard</option>
+            <option value="Budget">Budget</option>
+        </select>
+
+        <!-- Special Requests Section -->
+        <label for="Message" class="form-label">Special Requests/Notes</label>
+        <textarea name="Message" placeholder="Any special requirements or requests" class="input-field"></textarea>
+        
+        <!-- Terms and Agreement Section -->
+        <div class="terms-agreement">
+            <input type="checkbox" name="agreement" required>
+            <label for="agreement" class="text-sm text-gray-600">I agree to the <a href="#" class="text-blue-600">terms and conditions</a>.</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Booking</button>
+    </form>
+</div>
+
+<!-- Tailwind CSS Classes for Form -->
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f1f3f4, #f9f9f9);
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-container {
+        padding: 40px;
+        background: #fff;
+        border-radius: 12px;
+        max-width: 600px;
+        margin: 50px auto;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .input-field {
+        padding: 14px 16px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .input-field:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    select.input-field {
+        padding: 12px 16px;
+    }
+
+    textarea.input-field {
+        resize: vertical;
+    }
+
+    .terms-agreement {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    .submit-btn:active {
+        background-color: #004085;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-wrap justify-between space-y-6 md:space-y-0">
+            <!-- Company Info Section -->
+            <div class="w-full md:w-1/4">
+                <h3 class="text-xl font-bold mb-4">Ackli Holidays</h3>
+                <p class="text-gray-400 text-sm">
+                    Ackli Holidays is dedicated to providing travelers with unforgettable experiences. We are committed to offering the best tours, accommodations, and services.
+                </p>
+            </div>
+
+            <!-- Links Section -->
+            <div class="w-full md:w-1/6">
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" class="text-gray-400 hover:text-blue-400">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-blue-400">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-blue-400">Our Services</a></li>
+                    <li><a href="packages.html" class="text-gray-400 hover:text-blue-400">Tour Packages</a></li>
+                    <li><a href="contacts.html" class="text-gray-400 hover:text-blue-400">Contacts</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="w-full md:w-1/3">
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <p class="text-gray-400 text-sm mb-2">Email: ackliholidays@gmail.com</p>
+                <p class="text-gray-400 text-sm mb-2">Phone: +94 704463516</p>
+                <p class="text-gray-400 text-sm">Address: 102/2, Yudaganawa, Hingurakgoda, Sri Lanka</p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm flex justify-between">
+            <p class="text-gray-400">© 2025 Ackli Holidays | All rights reserved.</p>
+            <p class="text-gray-400 text-right">Developed by <a href="https://www.linkedin.com/in/mihilayan-sachinthana-4996041a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="font-bold text-blue-500 hover:text-blue-700">Mihilayan Sachinthana</a></p>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Tailwind CSS Custom Styles for Responsive Behavior -->
+<style>
+    @media screen and (max-width: 768px) {
+        footer .flex {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+<!-- Add FontAwesome for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
