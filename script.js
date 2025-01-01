@@ -28,3 +28,5 @@ mobileNavLinks.forEach(link => {
         link.classList.remove('text-blue-400', 'font-semibold');  // Remove active styles
     }
 });
+
+
