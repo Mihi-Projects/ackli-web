@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<header class="fixed w-full bg-gray-900 bg-opacity-80 text-white z-50">
+<header class="fixed w-full bg-gray-900 bg-opacity-95 text-white z-50">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="flex items-center justify-between py-4">
             <div class="flex items-center">
@@ -49,75 +49,66 @@
     </div>
 </header>
 
-<main class="relative min-h-screen overflow-hidden">
+<!-- Banner Section -->
+<main class="relative min-h-[60vh] overflow-hidden">
+    <!-- Background Image -->
     <div 
         class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out bg-image"
         id="dynamic-image"
         style="background-image: url('assets/images/BG-banner1.png');">
     </div>
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="relative container mx-auto px-4 flex items-center justify-center min-h-screen">
+    
+    <!-- Overlay with rgba(0, 0, 0, 0.6) -->
+    <div class="absolute inset-0 bg-[rgba(0,0,0,0.6)]"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-4 flex items-center justify-center min-h-[60vh]">
         <div class="text-center text-white">
-            <h2 class="text-6xl font-bold mb-4">YOUR PASSPORT</h2>
-            <h2 class="text-6xl font-bold">TO PARADISE!</h2>
+            <h2 class="text-sky-400 text-2xl font-bold mb-6 animate-fadeIn tracking-[0.4em]">ACKLI HOLIDAYS</h2>
+            <h2 class="text-6xl font-bold animate-fadeIn">ABOUT US</h2>
         </div>
     </div>
 </main>
 
-<style>
-    .bg-image {
-        background-position: center;
-        background-size: cover;
-        animation: zoomEffect 20s infinite alternate;
-    }
-
-    @keyframes zoomEffect {
-        0% {
-            background-image: url('assets/images/BG-banner1.png');
-            transform: scale(1); /* Original size */
-        }
-        33% {
-            background-image: url('assets/images/BG-banner2.png');
-            transform: scale(1.2); /* Zoom in */
-        }
-        66% {
-            background-image: url('assets/images/BG-banner3.png');
-            transform: scale(1); /* Return to original size */
-        }
-        100% {
-            background-image: url('assets/images/BG-banner1.png');
-            transform: scale(1); /* Original size */
-        }
-    }
-
-    /* Active link styles */
-    .active {
-        color: #3182ce; /* Blue color */
-        font-weight: 600; /* Bold text */
-    }
-</style>
 
 
+
+
+
+<script src="script.js"></script>
 
 <!-- About Section -->
-<div class="max-w-7xl mx-auto px-4 py-20">
-    <div class="text-center mb-16">
-      <h3 class="text-sky-400 text-lg uppercase tracking-widest mb-4">WELCOME TO</h3>
-      <h2 class="text-blue-900 text-4xl md:text-5xl font-bold mb-8">ACKLI HOLIDAYS</h2>
-      <p class="text-gray-600 text-lg max-w-4xl mx-auto mb-8">
-        Welcome to Ackli Holidays, your premier partner for an enchanting journey through the captivating island of Sri Lanka. With our unrivaled expertise and passion for travel, we invite you to embark on an unforgettable adventure that will awaken your senses and leave you with cherished memories that last a lifetime.
-      </p>
-      <p class="text-gray-600 text-lg max-w-4xl mx-auto mb-8">
-        At Ackli Holidays, we believe that travel is not just about visiting new places; it's about immersing yourself in the rich tapestry of culture, heritage, and natural beauty that Sri Lanka has to offer. Our dedicated team of travel experts is committed to curating tailor-made experiences that cater to your individual preferences, ensuring every aspect of your trip is meticulously planned and flawlessly executed.
-      </p>
-      <p class="text-gray-600 text-lg max-w-4xl mx-auto mb-8">
-        Join us on a voyage of discovery as we unlock the secrets of this resplendent island. Let Ackli Holidays be your passport to the wonders of Sri Lanka, where every moment is an extraordinary experience waiting to be unveiled.
-      </p>
-      <div class="mt-8">
-        <a href="about.html" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition">Read More</a>
-      </div>
+<div class="max-w-7xl mx-auto px-4 py-8 md:px-8 md:py-20">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+        <!-- Text Section -->
+        <div class="w-full md:w-1/2 text-left mb-8">
+            <div class="text-center md:text-left mb-16">
+                <h3 class="text-sky-400 text-lg uppercase tracking-widest mb-4">WELCOME TO</h3>
+                <h2 class="text-blue-900 text-3xl md:text-5xl font-bold mb-8">ACKLI HOLIDAYS</h2>
+                <p class="text-gray-600 text-base md:text-lg max-w-4xl mx-auto mb-8 text-justify">
+                    Ackli Holidays is your perfect guide to exploring the beautiful island of Sri Lanka. We love travel and want to help you have an amazing adventure you’ll never forget. Sri Lanka is full of amazing things to see, like colorful culture, exciting history, and stunning natural sights, and we want you to enjoy it all.
+                </p>
+                <p class="text-gray-600 text-base md:text-lg max-w-4xl mx-auto mb-8 text-justify">
+                    Our team of travel experts works hard to plan trips that are just right for you. We ensure every part of your journey is well-organized and easy so you can relax and have fun. At Ackli Holidays, we care about your comfort and happiness. Let us help you discover the wonders of Sri Lanka, where every moment is special!
+                </p>
+                
+            </div>
+        </div>
+        <!-- Image Section -->
+        <div class="w-full md:w-1/2">
+            <img src="assets/images/about image.jpg" alt="Sri Lanka Travel" class="w-full h-auto rounded-lg object-cover">
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 <!-- Footer Section -->
 <footer class="bg-gray-900 text-white py-8">
@@ -135,27 +126,28 @@
             <div class="w-full md:w-1/6">
                 <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                 <ul>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400">Home</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400">About Us</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400">Our Services</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400">Tour Packages</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400">Contacts</a></li>
+                    <li><a href="index.html" class="text-gray-400 hover:text-blue-400">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-blue-400">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-blue-400">Our Services</a></li>
+                    <li><a href="packages.html" class="text-gray-400 hover:text-blue-400">Tour Packages</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-blue-400">Contacts</a></li>
                 </ul>
             </div>
 
             <!-- Contact Info Section -->
             <div class="w-full md:w-1/3">
                 <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                <p class="text-gray-400 text-sm mb-2">Email: info@ackliholidays.com</p>
-                <p class="text-gray-400 text-sm mb-2">Phone: +1 (800) 123-4567</p>
-                <p class="text-gray-400 text-sm">Address: 123 Paradise Road, Colombo, Sri Lanka</p>
+                <p class="text-gray-400 text-sm mb-2">Email: ackliholidays@gmail.com</p>
+                <p class="text-gray-400 text-sm mb-2">Phone: +94 704463516</p>
+                <p class="text-gray-400 text-sm">Address: 102/2, Yudaganawa, Hingurakgoda, Sri Lanka</p>
             </div>
         </div>
 
         <!-- Footer Bottom Section -->
         <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm flex justify-between">
             <p class="text-gray-400">© 2025 Ackli Holidays | All rights reserved.</p>
-            <p class="text-gray-400 text-right">Developed by <span class="font-bold">Mihilayan Sachinthana</span></p>
+            <p class="text-gray-400 text-right">Developed by <a href="https://www.linkedin.com/in/mihilayan-sachinthana-4996041a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="font-bold text-blue-500 hover:text-blue-700">Mihilayan Sachinthana</a></p>
+
         </div>
     </div>
 </footer>
@@ -170,11 +162,8 @@
     }
 </style>
 
-<script src="script.js"></script>
-
 <!-- Add FontAwesome for social media icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
 
 </body>
 </html>
