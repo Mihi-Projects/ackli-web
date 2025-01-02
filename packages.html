@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
 </head>
 
 <body>
-<header class="fixed w-full bg-gray-900 bg-opacity-95 text-white z-50">
+<header id="header" class="fixed w-full bg-gray-900 bg-opacity-95 text-white z-50">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="flex items-center justify-between py-4">
             <div class="flex items-center">
@@ -64,15 +63,13 @@
     <!-- Content -->
     <div class="relative container mx-auto px-4 flex items-center justify-center min-h-[60vh]">
         <div class="text-center text-white">
-            <h2 class="text-sky-400 text-2xl font-bold mb-6 animate-fadeIn tracking-[0.4em]">TOUR</h2>
-            <h2 class="text-6xl font-bold animate-fadeIn">PACKAGES</h2>
+            <h2 class="text-sky-400 text-2xl font-bold mb-6 fade-in tracking-[0.4em]">TOUR</h2>
+            <h2 class="text-6xl font-bold fade-in">PACKAGES</h2>
         </div>
     </div>
 </main>
 
-
 <script src="script.js"></script>
-
 <!-- About Section -->
 <section class="popular" id="destination">
     <div class="container mx-auto px-6 py-16">
@@ -81,7 +78,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="spiritual.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/SPBG.jpg" alt="Spiritual" class="object-cover w-full h-full">
+                        <img src="./assets/images/SPBG.png" alt="Spiritual" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Spiritual</h3>
@@ -92,7 +89,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="wellness.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/WLBG.jpg" alt="Wellness" class="object-cover w-full h-full">
+                        <img src="./assets/images/WLBG.png" alt="Wellness" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Wellness</h3>
@@ -103,7 +100,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="adventure.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/ADBG.jpg" alt="Adventure" class="object-cover w-full h-full">
+                        <img src="./assets/images/ADBG.png" alt="Adventure" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Adventure</h3>
@@ -114,7 +111,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="wildlife.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/WildBG.jpg" alt="Wildlife" class="object-cover w-full h-full">
+                        <img src="./assets/images/wildBG.png" alt="Wildlife" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Wildlife</h3>
@@ -125,7 +122,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="cultural.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/CLBG.jpg" alt="Cultural" class="object-cover w-full h-full">
+                        <img src="./assets/images/CLBG.png" alt="Cultural" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Cultural</h3>
@@ -136,7 +133,7 @@
             <li class="transition-transform transform hover:scale-105 duration-300">
                 <a href="#" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                     <figure class="h-64 w-full">
-                        <img src="./assets/images/BEBG.jpg" alt="Beach Gateway" class="object-cover w-full h-full">
+                        <img src="./assets/images/BEBG.png" alt="Beach Gateway" class="object-cover w-full h-full">
                     </figure>
                     <div class="bg-white p-6 text-center rounded-b-lg">
                         <h3 class="text-xl font-semibold text-gray-800">Beach Gateway</h3>
@@ -146,8 +143,6 @@
         </ul>
     </div>
 </section>
-
-  
 
 <!-- Footer Section -->
 <footer class="bg-gray-900 text-white py-8">
@@ -186,7 +181,6 @@
         <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm flex justify-between">
             <p class="text-gray-400">© 2025 Ackli Holidays | All rights reserved.</p>
             <p class="text-gray-400 text-right">Developed by <a href="https://www.linkedin.com/in/mihilayan-sachinthana-4996041a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="font-bold text-blue-500 hover:text-blue-700">Mihilayan Sachinthana</a></p>
-
         </div>
     </div>
 </footer>
@@ -199,7 +193,42 @@
             align-items: center;
         }
     }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+    }
 </style>
+
+<!-- JavaScript for Scroll Animation -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const textElements = document.querySelectorAll("main .fade-in");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                    }
+                });
+            },
+            { threshold: 0.1 } // When 10% of the element is in view
+        );
+
+        textElements.forEach(element => observer.observe(element));
+    });
+</script>
 
 <!-- Add FontAwesome for social media icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
