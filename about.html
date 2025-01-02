@@ -48,7 +48,6 @@
         </button>
     </div>
 </header>
-
 <!-- Banner Section -->
 <main class="relative min-h-[60vh] overflow-hidden">
     <!-- Background Image -->
@@ -64,38 +63,30 @@
     <!-- Content -->
     <div class="relative container mx-auto px-4 flex items-center justify-center min-h-[60vh]">
         <div class="text-center text-white">
-            <h2 class="text-sky-400 text-2xl font-bold mb-6 animate-fadeIn tracking-[0.4em]">ACKLI HOLIDAYS</h2>
-            <h2 class="text-6xl font-bold animate-fadeIn">ABOUT US</h2>
+            <h2 id="banner-title" class="text-sky-400 text-2xl font-bold mb-6 opacity-0 animate-fadeIn tracking-[0.4em]">ACKLI HOLIDAYS</h2>
+            <h2 id="banner-subtitle" class="text-6xl font-bold opacity-0 animate-fadeIn">ABOUT US</h2>
         </div>
     </div>
 </main>
 
-
-
-
-
-
 <script src="script.js"></script>
 
 <!-- About Section -->
-
 <div class="max-w-7xl mx-auto px-4 py-8 md:px-8 md:py-20">
     <div class="text-center mb-16">
-        <h3 class="text-sky-400 text-lg uppercase tracking-widest mb-4">WELCOME TO</h3>
-        <h2 class="text-blue-900 text-4xl md:text-5xl font-bold mb-8">ACKLI HOLIDAYS (PVT) LTD</h2>
+        <h3 id="about-welcome" class="text-sky-400 text-lg uppercase tracking-widest mb-4 opacity-0">WELCOME TO</h3>
+        <h2 id="about-title" class="text-blue-900 text-4xl md:text-5xl font-bold mb-8 opacity-0">ACKLI HOLIDAYS (PVT) LTD</h2>
     </div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-12">
         <!-- Text Section -->
-        <div class="w-full md:w-1/2 text-left mb-8">
+        <div id="about-text" class="w-full md:w-1/2 text-left mb-8 opacity-0">
             <div class="text-center md:text-left mb-16">
-                
                 <p class="text-gray-600 text-base md:text-lg max-w-4xl mx-auto mb-8 text-justify">
                     Ackli Holidays is your perfect guide to exploring the beautiful island of Sri Lanka. We love travel and want to help you have an amazing adventure you’ll never forget. Sri Lanka is full of amazing things to see, like colorful culture, exciting history, and stunning natural sights, and we want you to enjoy it all.
                 </p>
                 <p class="text-gray-600 text-base md:text-lg max-w-4xl mx-auto mb-8 text-justify">
                     Our team of travel experts works hard to plan trips that are just right for you. We ensure every part of your journey is well-organized and easy so you can relax and have fun. At Ackli Holidays, we care about your comfort and happiness. Let us help you discover the wonders of Sri Lanka, where every moment is special!
                 </p>
-                
             </div>
         </div>
         <!-- Image Section -->
@@ -105,18 +96,16 @@
     </div>
 </div>
 
-
-
 <!-- Team Section -->
 <div class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-blue-900 mb-8">Meet Our Team</h2>
-        <p class="text-lg text-gray-600 mb-12">We are a group of passionate professionals dedicated to delivering exceptional travel experiences for you.</p>
+        <h2 id="team-title" class="text-4xl font-bold text-blue-900 mb-8 opacity-0">Meet Our Team</h2>
+        <p id="team-description" class="text-lg text-gray-600 mb-12 opacity-0">We are a group of passionate professionals dedicated to delivering exceptional travel experiences for you.</p>
         
         <!-- Team Members Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <!-- Team Member 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+            <div id="team-member-1" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0">
                 <img src="assets/images/chaminda-man.jpg" alt="Team Member 1" class="w-42 h-42 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold text-blue-900">MOHAN GAMAGE</h3>
                 <p class="text-gray-500 mb-4">Director</p>
@@ -132,7 +121,7 @@
             </div>
 
             <!-- Team Member 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+            <div id="team-member-2" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0">
                 <img src="assets/images/prem-man.jpg" alt="Team Member 2" class="w-42 h-42 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold text-blue-900">PREMARATHNA KALUARACHCHI</h3>
                 <p class="text-gray-500 mb-4">Director</p>
@@ -148,8 +137,8 @@
             </div>
 
             <!-- Team Member 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
-                <img src="assets/images/man.jpg" alt="Team Member 3" class="w-42 h-42 mx-auto rounded-full mb-4">
+            <div id="team-member-3" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0">
+                <img src="assets/images/man.png" alt="Team Member 3" class="w-42 h-42 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold text-blue-900">Sam Wilson</h3>
                 <p class="text-gray-500 mb-4">Tour Operations Manager</p>
                 <p class="text-gray-600">Sam oversees all our tour operations, ensuring that each trip runs smoothly and our clients experience unforgettable journeys.</p>
@@ -166,9 +155,49 @@
     </div>
 </div>
 
+<script>
+    // Intersection Observer Setup for scroll-based animation
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is in view
+    };
 
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fadeIn');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
 
+    const observer = new IntersectionObserver(animateOnScroll, options);
 
+    // Targeting all elements with the opacity-0 class
+    const elementsToAnimate = document.querySelectorAll('#banner-title, #banner-subtitle, #about-welcome, #about-title, #about-text, #team-title, #team-description, #team-member-1, #team-member-2, #team-member-3');
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
+</script>
+
+<style>
+    /* Animation for fadeIn effect */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fadeIn {
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+</style>
 
 
 
