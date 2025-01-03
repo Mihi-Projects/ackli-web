@@ -1,3 +1,4 @@
+
 // Mobile menu toggle
 const menuBtn = document.getElementById('menu-btn');
 const mobileNav = document.getElementById('mobile-nav');
@@ -28,8 +29,4 @@ mobileNavLinks.forEach(link => {
     }
 });
 
-// Set the high-resolution background image once the page is loaded
-window.addEventListener('load', () => {
-    const bgImage = document.querySelector('.bg-image');
-    bgImage.style.backgroundImage = "url('assets/images/BG-banner1.png')";
-});
+
